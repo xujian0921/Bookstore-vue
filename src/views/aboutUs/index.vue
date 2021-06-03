@@ -29,37 +29,37 @@
 </template>
 
 <script>
-  import Vue from 'vue'
+import Vue from 'vue'
 
-  import {
-    NavBar,
-Row, Col,
-Button,
-Toast
-  } from 'vant'
+import {
+  NavBar,
+  Row, Col,
+  Button,
+  Toast
+} from 'vant'
 
-  Vue.use(NavBar);
-  Vue.use(Button);
-  Vue.use(Row).use(Col);
-  Vue.use(Toast);
-  export default {
-    data() {
-      return {
+Vue.use(NavBar)
+Vue.use(Button)
+Vue.use(Row).use(Col)
+Vue.use(Toast)
+export default {
+  data () {
+    return {
 
-      }
+    }
+  },
+  computed: {
+
+  },
+  methods: {
+    onClickLeft () {
+      this.$router.back()
     },
-    computed: {
-
-    },
-    methods: {
-      onClickLeft() {
-        this.$router.back()
-      },
-vbutton(){
-Toast('已经是最新版本了');
-}
+    vbutton () {
+      Toast('已经是最新版本了')
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>

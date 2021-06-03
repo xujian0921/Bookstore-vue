@@ -189,7 +189,7 @@ export default {
   mounted () {
     console.log(this.$route)
     const { id } = this.$route.params
-    //fetch('/api/book/find?id=' + id)
+    // fetch('/api/book/find?id=' + id)
     fetch('http://47.100.225.183:8090/book/find?id=' + id)
 
       .then(res => res.json())
@@ -205,7 +205,7 @@ export default {
         this.publishingouse = detailData.publishingouse
         this.time = detailData.time
         this.kind = detailData.kind
-        //fetch('/api/book/find?kind=' + this.kind, { method: 'GET' })
+        // fetch('/api/book/find?kind=' + this.kind, { method: 'GET' })
         fetch('http://47.100.225.183:8090/book/find?kind=' + this.kind, { method: 'GET' })
 
           .then(res => res.json()).then(data => {

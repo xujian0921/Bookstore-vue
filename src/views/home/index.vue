@@ -101,13 +101,8 @@ export default {
   methods: {
     onRefresh () {
       this.isLoading = true
-<<<<<<< HEAD
-      //fetch('/api/book/find').then(res => res.json()).then(data => {
+      // fetch('/api/book/find').then(res => res.json()).then(data => {
       fetch('http://47.100.225.183:8090/book/find').then(res => res.json()).then(data => {
-=======
-      fetch('/api/book/find').then(res => res.json()).then(data => {
-      // fetch('http://47.100.225.183:8090/book/find').then(res => res.json()).then(data => {
->>>>>>> db717d48058ee26ff4c6dfd3a669cf1b9c85bd51
         this.isLoading = false // 下拉刷新结束
         this.prolist = data // 重置列表的数据
         this.pageNum = 1 // 重置页码 --- 下拉刷新相当于第一页数据
@@ -120,13 +115,8 @@ export default {
     onLoad () {
       console.log('可以加载数据了')
       this.loading = true // 开始加载数据
-<<<<<<< HEAD
-      //fetch('/api/book/find?count=20&start=' + this.pageNum * 20)
+      // fetch('/api/book/find?count=20&start=' + this.pageNum * 20)
       fetch('http://47.100.225.183:8090/book/find?count=20&start=' + this.pageNum * 20)
-=======
-      fetch('/api/book/find?count=20&start=' + this.pageNum * 20)
-      // fetch('http://47.100.225.183:8090/book/find?count=20&start=' + this.pageNum * 20)
->>>>>>> db717d48058ee26ff4c6dfd3a669cf1b9c85bd51
         .then(res => res.json()).then(data => {
           this.loading = false // 数据加载完毕
           this.pageNum++
@@ -144,26 +134,16 @@ export default {
     },
     add () {
       this.num++
-<<<<<<< HEAD
-      //fetch('/api/book/find?count=4&start=' + this.num * 4, { method: 'GET' })
-       fetch('http://47.100.225.183:8090/book/find?count=4&start=' + this.num * 4, { method: 'GET' })
-=======
-      fetch('/api/book/find?count=4&start=' + this.num * 4, { method: 'GET' })
-      // fetch('http://47.100.225.183:8090/book/find?count=4&start=' + this.num * 4, { method: 'GET' })
->>>>>>> db717d48058ee26ff4c6dfd3a669cf1b9c85bd51
+      // fetch('/api/book/find?count=4&start=' + this.num * 4, { method: 'GET' })
+      fetch('http://47.100.225.183:8090/book/find?count=4&start=' + this.num * 4, { method: 'GET' })
         .then(res => res.json()).then(data => {
           this.detaillist = data.data
         })
     }
   },
   mounted () {
-<<<<<<< HEAD
-    //fetch('/api/banner')
+    // fetch('/api/banner')
     fetch('http://47.100.225.183:8090/banner')
-=======
-    fetch('api/banner')
-    // fetch('http://47.100.225.183:8090/banner')
->>>>>>> db717d48058ee26ff4c6dfd3a669cf1b9c85bd51
       .then(res => res.json())
       .then(data => {
         console.log(data.data)
@@ -175,25 +155,15 @@ export default {
         })
         this.bannerlist = arr
       })
-<<<<<<< HEAD
-    //fetch('/api/book/find', { method: 'GET' })
+    // fetch('/api/book/find', { method: 'GET' })
     fetch('http://47.100.225.183:8090/book/find', { method: 'GET' })
-=======
-    fetch('/api/book/find', { method: 'GET' })
-    // fetch('http://47.100.225.183:8090/book/find', { method: 'GET' })
->>>>>>> db717d48058ee26ff4c6dfd3a669cf1b9c85bd51
       .then(res => res.json())
       .then(data => {
         console.log(data.data)
         this.prolist = data.data
       })
-<<<<<<< HEAD
-    //fetch('/api/book/find?count=4&start=' + this.num * 4, { method: 'GET' })
+    // fetch('/api/book/find?count=4&start=' + this.num * 4, { method: 'GET' })
     fetch('http://47.100.225.183:8090/book/find?count=4&start=' + this.num * 4, { method: 'GET' })
-=======
-    fetch('/api/book/find?count=4&start=' + this.num * 4, { method: 'GET' })
-    // fetch('http://47.100.225.183:8090/book/find?count=4&start=' + this.num * 4, { method: 'GET' })
->>>>>>> db717d48058ee26ff4c6dfd3a669cf1b9c85bd51
       .then(res => res.json()).then(data => {
         this.detaillist = data.data
       })

@@ -28,15 +28,11 @@ export default {
   },
   methods: {
     goDeta (id) {
-		//console.log(id)
-    //console.log(this)
-    //console.log(this.$router)
+      // console.log(id)
+    // console.log(this)
+    // console.log(this.$router)
       this.$router.push({ name: 'detail', params: { id: id } })
-<<<<<<< HEAD
-      location.reload();
-=======
-      this.$router.go(0)
->>>>>>> db717d48058ee26ff4c6dfd3a669cf1b9c85bd51
+      location.reload()
     }
   }
 }

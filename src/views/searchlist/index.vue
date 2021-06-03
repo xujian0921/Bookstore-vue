@@ -36,13 +36,7 @@ export default {
   },
   mounted () {
     const { search } = this.$route.params
-<<<<<<< HEAD
-    //fetch('/api/book/search?search=' + search, { method: 'GET' })
     fetch('http://47.100.225.183:8090/book/search?search=' + search, { method: 'GET' })
-=======
-    fetch('/api/book/search?search=' + search, { method: 'GET' })
-    // fetch('http://47.100.225.183:8090/book/search?search=' + search, { method: 'GET' })
->>>>>>> db717d48058ee26ff4c6dfd3a669cf1b9c85bd51
       .then(res => res.json())
       .then(data => {
         this.prolist = data.data

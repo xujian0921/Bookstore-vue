@@ -100,7 +100,7 @@
 <script>
 import Vue from 'vue'
 import { mapState, mapGetters } from 'vuex'
-import { GoodsAction, GoodsActionIcon, GoodsActionButton, NavBar, Sku, Tab, Tabs, Row, Col, Icon, Toast ,ImagePreview} from 'vant'
+import { GoodsAction, GoodsActionIcon, GoodsActionButton, NavBar, Sku, Tab, Tabs, Row, Col, Icon, Toast, ImagePreview } from 'vant'
 
 import Detaillist from '@/components/common/Detaillist'
 Vue.use(GoodsAction)
@@ -112,7 +112,7 @@ Vue.use(Tab).use(Tabs)
 Vue.use(Row).use(Col)
 Vue.use(Icon)
 Vue.use(Toast)
-Vue.use(ImagePreview);
+Vue.use(ImagePreview)
 
 export default {
   data () {
@@ -198,12 +198,12 @@ export default {
     }
   },
   mounted () {
-    //console.log(this.$route)
+    // console.log(this.$route)
     const { id } = this.$route.params
     const wid = this.$route.params.id
-    //console.log("$route",$route);
-    console.log("id",id);
-    console.log("wid",wid);
+    // console.log("$route",$route);
+    console.log('id', id)
+    console.log('wid', wid)
     // fetch('/api/book/find?id=' + id)
     fetch('http://47.100.225.183:8090/book/find?id=' + id)
       .then(res => res.json())
@@ -219,7 +219,7 @@ export default {
         this.publishingouse = detailData.publishingouse
         this.time = detailData.time
         this.kind = detailData.kind
-        //fetch('/api/book/find?kind=' + this.kind, { method: 'GET' })
+        // fetch('/api/book/find?kind=' + this.kind, { method: 'GET' })
         fetch('http://47.100.225.183:8090/book/find?kind=' + this.kind, { method: 'GET' })
           .then(res => res.json()).then(data => {
             this.detaillist = data.data

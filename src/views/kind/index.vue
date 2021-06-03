@@ -71,7 +71,7 @@ export default {
   methods: {
     goDeta (kind) {
       // fetch('https://www.daxunxun.com/douban?count=20&start=' + num * 20)
-      //fetch('/api/book/find?kind=' + kind, { method: 'GET' })
+      // fetch('/api/book/find?kind=' + kind, { method: 'GET' })
       fetch('http://47.100.225.183:8090/book/find?kind=' + kind, { method: 'GET' })
 
         .then(res => res.json()).then(data => {
@@ -87,13 +87,9 @@ export default {
     }
   },
   mounted () {
-<<<<<<< HEAD
-    //fetch('/api/banner')
+    // fetch('/api/banner')
     fetch('http://47.100.225.183:8090/banner')
 
-=======
-    fetch('/api/banner')
->>>>>>> db717d48058ee26ff4c6dfd3a669cf1b9c85bd51
       .then(res => res.json())
       .then(data => {
         console.log(data.data)
@@ -106,7 +102,7 @@ export default {
         this.bannerlist = arr
       })
     // 请求的是列表的数据
-   // fetch('/api/book/find?kind=小说', { method: 'GET' })
+    // fetch('/api/book/find?kind=小说', { method: 'GET' })
     fetch('http://47.100.225.183:8090/book/find?kind=小说', { method: 'GET' })
 
       .then(res => res.json()).then(data => {
